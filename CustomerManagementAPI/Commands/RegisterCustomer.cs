@@ -1,0 +1,31 @@
+﻿using Infrastructure.Messaging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace CustomerManagementAPI.Commands
+{
+    public class RegisterCustomer : Command
+    {
+        public readonly string CustomerId;
+        public readonly string Name;
+        public readonly string Address;
+        public readonly string PostalCode;
+        public readonly string City;
+        public readonly string TelephoneNumber;
+        public readonly string EmailAddress;
+
+        public RegisterCustomer(Guid messageId, string name, string address, string postalCode, string city,
+            string telephoneNumber, string emailAddress) : base(messageId)
+        {
+            CustomerId = Guid.NewGuid().ToString();
+            Name = name;
+            Address = address;
+            PostalCode = postalCode;
+            City = city;
+            TelephoneNumber = telephoneNumber;
+            EmailAddress = emailAddress;
+        }
+    }
+}
