@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WorkshopManagementEventHandler": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
